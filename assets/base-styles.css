@@ -1,0 +1,24 @@
+/* remove the margins */
+body {
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: 60px 80px 300px 200px 400px 400px 20px;
+    width: 100%;
+    min-width 2160px;
+    height: 100%;
+}
+
+.banner-container{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 49;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 1/2;
+    background-color: #333;
+    border-bottom: 8px solid #888;
+}
