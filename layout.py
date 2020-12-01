@@ -1,5 +1,8 @@
 import dash_html_components as html
 import dash_core_components as dcc
+from config import APP_NAME
+
+
 
 def create_header():
 
@@ -8,9 +11,13 @@ def create_header():
                           html.Img(
                               className='banner-image',
                               src='assets/logo.png'
+                          ),
+
+                          html.Div(
+                              className='banner-title',
+                              children=[html.H1(children=[APP_NAME])]
                           )
                       ]
-
-    )
+                      )
 
     return header
