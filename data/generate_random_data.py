@@ -12,6 +12,7 @@ def generate_random_dataframe(num_rows, seed=73):
     
     df['category2']  = [['XXXX', 'YYYY', 'ZZZZ', 'WWWW'][random.randrange(4)] for x in range(num_rows)]
     
+    df['value1'] = [random.randrange(10000, 12e5) for x in range(num_rows)]
 
     return df
 
