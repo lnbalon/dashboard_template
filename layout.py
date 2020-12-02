@@ -3,7 +3,6 @@ import dash_core_components as dcc
 from config import APP_NAME
 
 
-
 def create_header():
 
     header = html.Div(className='banner-container',
@@ -21,3 +20,10 @@ def create_header():
                       )
 
     return header
+
+
+def create_selector():
+
+    selector = html.Div(className='selector-container')
+
+    return selector

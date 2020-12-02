@@ -46,3 +46,14 @@ body {
     text-align: left;
     margin-top: 15px;
 }
+
+.selector-container{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 3/5;
+    border-style: dashed;
+    background-color: #ebf0f2;
+}
