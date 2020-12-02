@@ -22,7 +22,8 @@ app.layout = html.Div(className='container',
                           selector,
                           footer,
                           chart1,
-                          chart2
+                          chart2,
+                          chart3
                       ]
 )
 
