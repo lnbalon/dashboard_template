@@ -34,3 +34,10 @@ def create_summary():
     summary = html.Div(className='summary-container')
 
     return summary
+
+
+def create_footer():
+
+    footer = html.Div(className='footer')
+
+    return footer

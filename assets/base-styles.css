@@ -68,3 +68,14 @@ body {
     border-style: dashed;
     background-color: #ebf0f2;
 }
+
+.footer{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 49;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 7/8;
+    border-style: dashed;
+    background-color: #ebf0f2;
+}
