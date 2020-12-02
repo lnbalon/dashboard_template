@@ -57,3 +57,14 @@ body {
     border-style: dashed;
     background-color: #ebf0f2;
 }
+
+.summary-container{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 40;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 2/3;
+    border-style: dashed;
+    background-color: #ebf0f2;
+}

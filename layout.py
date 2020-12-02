@@ -27,3 +27,10 @@ def create_selector():
     selector = html.Div(className='selector-container')
 
     return selector
+
+
+def create_summary():
+
+    summary = html.Div(className='summary-container')
+
+    return summary
