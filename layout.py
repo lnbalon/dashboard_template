@@ -43,6 +43,13 @@ def create_chart1():
     return chart1
 
 
+def create_chart2():
+
+    chart2 = html.Div(className='chart-area2')
+
+    return chart2
+
+
 def create_footer():
 
     footer = html.Div(className='footer')
