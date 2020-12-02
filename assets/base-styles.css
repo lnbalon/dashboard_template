@@ -83,7 +83,7 @@ body {
 .chart-area2{
     display: grid;
     grid-column-start: 30;
-    grid-column-end: 40;
+    grid-column-end: 49;
     grid-template-columns: repeat(48, 1fr);
     grid-template-rows: subgrid;
     grid-row: 3/5;
@@ -91,6 +91,16 @@ body {
     background-color: #fdse;
 }
 
+.chart-area2{
+    display: grid;
+    grid-column-start: 30;
+    grid-column-end: 49;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 3/5;
+    border-style: dashed;
+    background-color: #fdse;
+}
 
 
 .footer{
