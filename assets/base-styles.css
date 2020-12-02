@@ -69,6 +69,17 @@ body {
     background-color: #ebf0f2;
 }
 
+.chart-area1{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 30;
+    grid-template-columns: repeat(48, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: 3/5;
+    border-style: dashed;
+    background-color: #fed;
+}
+
 .footer{
     display: grid;
     grid-column-start: 1;
