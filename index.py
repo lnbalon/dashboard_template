@@ -3,6 +3,7 @@ import flask
 import dash_html_components as html
 from layout import create_header, create_selector, create_summary, create_footer, \
     create_chart1, create_chart2, create_chart3
+from callbacks import register_callbacks
 
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server)
@@ -26,6 +27,8 @@ app.layout = html.Div(className='container',
                           chart3
                       ]
 )
+
+register_callbacks(app)
 
 if __name__ == '__main__':
 

@@ -110,7 +110,15 @@ def create_selector():
 
 def create_summary():
 
-    summary = html.Div(className='summary-container')
+    summary = html.Div(className='summary-container',
+                       children=[
+
+                           html.Div(className='summary1',
+                                    children=[
+                                        html.H6('Category 1:'),
+                                        html.H6(id='category1')
+                                    ])
+                       ])
 
     return summary
 
