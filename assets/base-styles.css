@@ -51,24 +51,21 @@ body {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-template-columns: repeat(48, 1fr);
-    grid-template-rows: subgrid;
-    grid-row: 3/5;
+    grid-row: 3/4;
+    border-radius: 10px;
+    background-color: #ebf0f2;
+}
+
+.summary-container{
+    display: grid;
+    grid-column-start: 7;
+    grid-column-end: 40;
+    grid-row: 2/3;
     border-radius: 10px;
     background-color: #ebf0f2;
 }
 
 
-.summary-container{
-    display: grid;
-    grid-column-start: 8;
-    grid-column-end: 40;
-    grid-template-columns: repeat(48, 1fr);
-    grid-template-rows: subgrid;
-    grid-row: 2/3;
-    border-style: dashed;
-    background-color: #ebf0f2;
-}
 
 .chart-area1{
     display: grid;

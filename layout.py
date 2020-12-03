@@ -42,8 +42,7 @@ def create_selector():
                                                   style={'font-family': 'Arial',
                                                          'font-size': '12px',
                                                          'margin-top': '12px',
-                                                         'margin-left': '5px',
-                                                         'white-space': 'nowrap'}),
+                                                         'margin-left': '5px'}),
 
                                          dcc.Dropdown(
                                              className='dropdown',
@@ -65,13 +64,35 @@ def create_selector():
                                          html.Div('Select Category2:',
                                                   style={'font-family': 'Arial',
                                                          'font-size': '12px',
-                                                         'margin-top': '12px',
-                                                         'margin-left': '5px',
-                                                         'white-space': 'nowrap'}),
+                                                         'margin-top': '2px',
+                                                         'margin-left': '5px'}),
 
                                          dcc.Dropdown(
                                              className='dropdown',
                                              id='categorySelector2',
+                                             options=[{'label': x, 'value': x} for x in CATEGORY2],
+                                             value=CATEGORY2[0],
+                                             style={'margin-top': '12px',
+                                                    'margin-bottom': '10px'}),
+
+                                         html.Div(style={'width': '90%',
+                                                         'margin': 'auto',
+                                                         'border-bottom': '1px solid black'})
+                                     ]),
+
+                            # category2 selector
+                            html.Div(id='category3-selector',
+                                     children=[
+
+                                         html.Div('Select Category3:',
+                                                  style={'font-family': 'Arial',
+                                                         'font-size': '12px',
+                                                         'margin-top': '2px',
+                                                         'margin-left': '5px'}),
+
+                                         dcc.Dropdown(
+                                             className='dropdown',
+                                             id='categorySelector3',
                                              options=[{'label': x, 'value': x} for x in CATEGORY2],
                                              value=CATEGORY2[0],
                                              style={'margin-top': '12px',
