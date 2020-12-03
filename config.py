@@ -1,1 +1,2 @@
 APP_NAME = 'SAMPLE DASHBOARD TEMPLATE'
+PATH_DATASET1 = r'data/dataset1.csv'

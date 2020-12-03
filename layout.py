@@ -1,6 +1,12 @@
 import dash_html_components as html
 import dash_core_components as dcc
 from config import APP_NAME
+from functions import get_category1
+import pandas as pd
+from config import PATH_DATASET1
+
+df = pd.read_csv(PATH_DATASET1)
+CATEGORY1 = get_category1(df)
 
 
 def create_header():
@@ -24,7 +30,28 @@ def create_header():
 
 def create_selector():
 
-    selector = html.Div(className='selector-container')
+    selector = html.Div(className='selector-container',
+                        children=[
+
+                            # category1 selector
+                            html.Div(id='category1-selector',
+                                     children=[
+                                         html.Div('Select Category1:',
+                                                  style={'font-family': 'Arial',
+                                                         'font-size': '12px',
+                                                         'margin-top': '12px',
+                                                         'margin-left': '5px',
+                                                         'white-space': 'nowrap'}),
+                                         dcc.Dropdown(
+                                             className='dropdown',
+                                             id='categorySelector1',
+                                             options=[{'label': x, 'value': x} for x in CATEGORY1],
+                                             value=CATEGORY1[0],
+                                             style={'margin-top': '12px'}
+                                         )
+                                     ])
+
+                        ])
 
     return selector
 
