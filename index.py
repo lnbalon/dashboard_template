@@ -1,34 +1,23 @@
 import dash
 import flask
 import dash_html_components as html
-from layout import create_header, create_selector, create_summary, create_footer, \
-    create_chart1, create_chart2, create_chart3
-from callbacks import register_callbacks
+from layout import logo_container, app_name_container, summary_container1, summary_container2
 
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server)
 
-header = create_header()
-summary = create_summary()
-selector = create_selector()
-footer = create_footer()
-chart1 = create_chart1()
-chart2 = create_chart2()
-chart3 = create_chart3()
+logo = logo_container()
+app_name = app_name_container()
+summary1 = summary_container1()
+summary2 = summary_container2()
 
 app.layout = html.Div(className='container',
                       children=[
-                          header,
-                          summary,
-                          selector,
-                          footer,
-                          chart1,
-                          chart2,
-                          chart3
-                      ]
-)
-
-register_callbacks(app)
+                          logo,
+                          app_name,
+                          summary1,
+                          summary2
+                      ])
 
 if __name__ == '__main__':
 
