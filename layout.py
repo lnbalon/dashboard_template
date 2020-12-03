@@ -1,12 +1,13 @@
 import dash_html_components as html
 import dash_core_components as dcc
 from config import APP_NAME
-from functions import get_category1
+from functions import get_category1, get_category2
 import pandas as pd
 from config import PATH_DATASET1
 
 df = pd.read_csv(PATH_DATASET1)
-CATEGORY1 = get_category1(df)
+CATEGORY1 = sorted(get_category1(df))
+CATEGORY2 = sorted(get_category2(df))
 
 
 def create_header():

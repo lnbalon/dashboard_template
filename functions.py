@@ -19,6 +19,11 @@ def get_category1(df):
     return list(df['category1'].unique())
 
 
+def get_category2(df):
+
+    return list(df['category2'].unique())
+
+
 if __name__ == '__main__':
 
     df_ = get_data_from_csv(PATH_DATASET1)
