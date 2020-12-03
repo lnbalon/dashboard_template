@@ -21,7 +21,5 @@ def get_category1(df):
 
 if __name__ == '__main__':
 
-    df = get_data_from_csv(PATH_DATASET1)
-
-
-    print(df)
+    df_ = get_data_from_csv(PATH_DATASET1)
+    print(df_)

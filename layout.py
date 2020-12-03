@@ -36,19 +36,25 @@ def create_selector():
                             # category1 selector
                             html.Div(id='category1-selector',
                                      children=[
+
                                          html.Div('Select Category1:',
                                                   style={'font-family': 'Arial',
                                                          'font-size': '12px',
                                                          'margin-top': '12px',
                                                          'margin-left': '5px',
                                                          'white-space': 'nowrap'}),
+
                                          dcc.Dropdown(
                                              className='dropdown',
                                              id='categorySelector1',
                                              options=[{'label': x, 'value': x} for x in CATEGORY1],
                                              value=CATEGORY1[0],
-                                             style={'margin-top': '12px'}
-                                         )
+                                             style={'margin-top': '12px',
+                                                    'margin-bottom': '10px'}),
+
+                                         html.Div(style={'width': '90%',
+                                                         'margin': 'auto',
+                                                         'border-bottom': '1px solid black'})
                                      ])
 
                         ])
