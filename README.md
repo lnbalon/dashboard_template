@@ -9,6 +9,7 @@ This repository contains a template for the creation of dashboard using Plotly a
 - [x] Generate a README and requirements.txt files
 - [ ] Create dashboard layout using css styling
 - [ ] Add selector components
+- [ ] Explore how to add line breaks after Html.Div()
 - [ ] Add callbacks
 - [ ] Add summary
 - [ ] Donut chart
