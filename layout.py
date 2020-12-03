@@ -1,14 +1,14 @@
 import dash_html_components as html
 import dash_core_components as dcc
 from config import APP_NAME
-from functions import get_category1, get_category2
+from functions import get_category1, get_category2, get_category3
 import pandas as pd
 from config import PATH_DATASET1
 
 df = pd.read_csv(PATH_DATASET1)
 CATEGORY1 = sorted(get_category1(df))
 CATEGORY2 = sorted(get_category2(df))
-
+CATEGORY3 = sorted(get_category3(df))
 
 def create_header():
 
@@ -93,8 +93,8 @@ def create_selector():
                                          dcc.Dropdown(
                                              className='dropdown',
                                              id='categorySelector3',
-                                             options=[{'label': x, 'value': x} for x in CATEGORY2],
-                                             value=CATEGORY2[0],
+                                             options=[{'label': x, 'value': x} for x in CATEGORY3],
+                                             value=CATEGORY3[0],
                                              style={'margin-top': '12px',
                                                     'margin-bottom': '10px'}),
 

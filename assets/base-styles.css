@@ -54,6 +54,7 @@ body {
     grid-row: 3/4;
     border-radius: 10px;
     background-color: #ebf0f2;
+    margin: 5px;
 }
 
 .summary-container{
@@ -63,6 +64,7 @@ body {
     grid-row: 2/3;
     border-radius: 10px;
     background-color: #ebf0f2;
+    margin: 5px;
 }
 
 
