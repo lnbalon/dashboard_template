@@ -12,7 +12,10 @@ CATEGORY3 = sorted(get_category3(df))
 def logo_container():
 
     logo = html.Div(className='logo-container',
-                    children=['logo goes here'])
+                    children=[
+                        html.Img(className='logo-image',
+                                 src='assets/logo.jpeg')
+                    ])
 
     return logo
 

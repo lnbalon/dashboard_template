@@ -9,9 +9,18 @@ body {
 }
 
 .logo-container {
+    display: inline-grid;
     grid-column: 1/2;
     grid-row: 1/2;
+    border-radius: 10px;
     border: dashed 1px;
+}
+
+.logo-image {
+    height: 90%;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
 }
 
 .title-container {
