@@ -23,7 +23,7 @@ def logo_container():
 def app_name_container():
 
     app_name = html.Div(className='title-container',
-                        children=['TITLE GOES HERE'])
+                        children=['Sample Dashboard Template'])
 
     return app_name
 
