@@ -143,3 +143,21 @@ def summary_container3():
                        ])
 
     return element
+
+
+def summary_container4():
+
+    element = html.Div(className='summary-container4',
+                       children=[
+                           html.Div('Value 1:',
+                                    style={'font-size': '14px',
+                                           'font-weight': 'normal'}),
+
+                           html.Div(id='start-date',
+                                    style={'font-size': '24px',
+                                           'font-weight': 'bold',
+                                           'margin-top': '15px',
+                                           'margin-left': '10px'}),
+                       ])
+
+    return element
