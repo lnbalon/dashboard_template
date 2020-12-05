@@ -84,6 +84,7 @@ def date_selector_container():
                                id='date-range',
                                min_date_allowed=MIN_DATE,
                                max_date_allowed=MAX_DATE,
+                               start_date=MIN_DATE,
                                initial_visible_month=MIN_DATE,
                                end_date=MAX_DATE,
                                style={'font-size': '12px'}
