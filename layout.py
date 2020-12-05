@@ -33,16 +33,15 @@ def category1_selector_container():
 
     element = html.Div(className='category1-selector',
                        children=[
-                           html.Div('Select Category',
-                                    style={'font': 'Helvetica',
+                           html.Div('Select Category 1',
+                                    style={'font-weight': 'Bold',
                                            'font-size': '12px',
                                            'margin-bottom': '5px'}),
 
                            dcc.Dropdown(id='demo-dropdown',
                                         options=[{'label': x, 'value': x} for x in CATEGORY1],
                                         value=CATEGORY1[0],
-                                        style={'font': 'Helvetica',
-                                               'font-size': '11px',
+                                        style={'font-size': '12px',
                                                'width': '150px'})
                        ])
 
@@ -53,8 +52,8 @@ def category2_selector_container():
 
     element = html.Div(className='category2-selector',
                        children=[
-                           html.Div('Select Category',
-                                    style={'font': 'Helvetica',
+                           html.Div('Select Category 2',
+                                    style={'font-weight': 'Bold',
                                            'font-size': '12px',
                                            'margin-bottom': '5px'}),
 
@@ -62,8 +61,7 @@ def category2_selector_container():
                                           options=[{'label': x, 'value': x} for x in CATEGORY2],
                                           value=CATEGORY2[0],
                                           labelStyle={'display': 'block'},
-                                          style={'font': 'Helvetica',
-                                                 'font-size': '11px',
+                                          style={'font-size': '12px',
                                                  'width': '150px'})
                        ])
 
