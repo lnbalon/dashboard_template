@@ -31,6 +31,6 @@ def register_callbacks(app):
         df_new = df[(df['category1'] == category1) & (df['category2'] == category2)]
         value1 = df_new['value1'].sum()
 
-        return value1
+        return "{:,}".format(value1)
 
 

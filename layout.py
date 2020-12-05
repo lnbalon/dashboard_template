@@ -3,6 +3,7 @@ import dash_core_components as dcc
 from functions import get_category1, get_category2, get_category3
 import pandas as pd
 from config import PATH_DATASET1
+import datetime
 
 df = pd.read_csv(PATH_DATASET1)
 CATEGORY1 = sorted(get_category1(df))
@@ -63,6 +64,27 @@ def category2_selector_container():
                                           labelStyle={'display': 'block'},
                                           style={'font-size': '12px',
                                                  'width': '150px'})
+                       ])
+
+    return element
+
+
+def date_selector_container():
+
+    element = html.Div(className='date-selector',
+                       children=[
+                           html.Div('Select Date Range',
+                                    style={'font-weight': 'Bold',
+                                           'font-size': '12px',
+                                           'margin-bottom': '5px'}),
+
+                           dcc.DatePickerRange(
+                               id='date-range',
+                               min_date_allowed=datetime.date(1995, 8, 5),
+                               max_date_allowed=datetime.date(2017, 9, 19),
+                               initial_visible_month=datetime.date(2017, 8, 5),
+                               end_date=datetime.date(2017, 8, 25)
+                           )
                        ])
 
     return element
