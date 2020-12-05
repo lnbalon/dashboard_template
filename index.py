@@ -1,32 +1,38 @@
 import dash
 import flask
 import dash_html_components as html
-from layout import create_header, create_selector, create_summary, create_footer, \
-    create_chart1, create_chart2, create_chart3
+from layout import logo_container, app_name_container, summary_container1, summary_container2, \
+    category1_selector_container, category2_selector_container, summary_container3, date_selector_container, \
+    summary_container4, summary_container5
 from callbacks import register_callbacks
 
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server)
 
-header = create_header()
-summary = create_summary()
-selector = create_selector()
-footer = create_footer()
-chart1 = create_chart1()
-chart2 = create_chart2()
-chart3 = create_chart3()
+logo = logo_container()
+app_name = app_name_container()
+selector1 = category1_selector_container()
+selector2 = category2_selector_container()
+selector3 = date_selector_container()
+summary1 = summary_container1()
+summary2 = summary_container2()
+summary3 = summary_container3()
+summary4 = summary_container4()
+summary5 = summary_container5()
 
 app.layout = html.Div(className='container',
                       children=[
-                          header,
-                          summary,
-                          selector,
-                          footer,
-                          chart1,
-                          chart2,
-                          chart3
-                      ]
-)
+                          logo,
+                          app_name,
+                          summary1,
+                          summary2,
+                          summary3,
+                          summary4,
+                          summary5,
+                          selector1,
+                          selector2,
+                          selector3
+                      ])
 
 register_callbacks(app)
 
