@@ -9,6 +9,8 @@ df = pd.read_csv(PATH_DATASET1)
 CATEGORY1 = sorted(get_category1(df))
 CATEGORY2 = sorted(get_category2(df))
 CATEGORY3 = sorted(get_category3(df))
+MIN_DATE = pd.to_datetime(df['date']).min().strftime('%Y-%m-%d')
+MAX_DATE = pd.to_datetime(df['date']).max().strftime('%Y-%m-%d')
 
 
 def logo_container():
@@ -80,10 +82,10 @@ def date_selector_container():
 
                            dcc.DatePickerRange(
                                id='date-range',
-                               min_date_allowed=datetime.date(1995, 8, 5),
-                               max_date_allowed=datetime.date(2017, 9, 19),
-                               initial_visible_month=datetime.date(2017, 8, 5),
-                               end_date=datetime.date(2017, 8, 25),
+                               min_date_allowed=MIN_DATE,
+                               max_date_allowed=MAX_DATE,
+                               initial_visible_month=MIN_DATE,
+                               end_date=MAX_DATE,
                                style={'font-size': '12px'}
                            )
                        ])
