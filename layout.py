@@ -71,7 +71,17 @@ def category2_selector_container():
 def summary_container1():
 
     element = html.Div(className='summary-container1',
-                       children=['summary container'])
+                       children=[
+                           html.Div('Category 1:',
+                                    style={'font-size': '14px',
+                                           'font-weight': 'normal'}),
+
+                           html.Div(id='category1',
+                                    style={'font-size': '24px',
+                                           'font-weight': 'bold',
+                                           'margin-top': '15px',
+                                           'margin-left': '10px'}),
+                       ])
 
     return element
 
@@ -79,6 +89,16 @@ def summary_container1():
 def summary_container2():
 
     element = html.Div(className='summary-container2',
-                       children=['summary container'])
+                       children=[
+                           html.Div('Category 2:',
+                                    style={'font-size': '14px',
+                                           'font-weight': 'normal'}),
+
+                           html.Div(id='category2',
+                                    style={'font-size': '24px',
+                                           'font-weight': 'bold',
+                                           'margin-top': '15px',
+                                           'margin-left': '10px'}),
+                       ])
 
     return element
