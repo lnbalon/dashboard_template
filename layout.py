@@ -149,7 +149,7 @@ def summary_container4():
 
     element = html.Div(className='summary-container4',
                        children=[
-                           html.Div('Value 1:',
+                           html.Div('Date Start:',
                                     style={'font-size': '14px',
                                            'font-weight': 'normal'}),
 
