@@ -83,7 +83,8 @@ def date_selector_container():
                                min_date_allowed=datetime.date(1995, 8, 5),
                                max_date_allowed=datetime.date(2017, 9, 19),
                                initial_visible_month=datetime.date(2017, 8, 5),
-                               end_date=datetime.date(2017, 8, 25)
+                               end_date=datetime.date(2017, 8, 25),
+                               style={'font-size': '12px'}
                            )
                        ])
 

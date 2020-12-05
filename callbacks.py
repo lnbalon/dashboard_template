@@ -21,7 +21,7 @@ def register_callbacks(app):
     def output_category1(category2):
         return category2
 
-    # category2
+    # value1
     @app.callback(
         Output('value1', 'children'),
         [Input('demo-dropdown', 'value'),
