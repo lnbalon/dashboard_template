@@ -35,7 +35,8 @@ def register_callbacks(app):
 
     # date selector
     @app.callback(
-        Output('start-date', 'children'),
+        [Output('start-date', 'children'),
+         Output('end-date', 'children')],
         [Input('date-range', 'start_date'),
          Input('date-range', 'end_date')])
     def output_date(sd, ed):
