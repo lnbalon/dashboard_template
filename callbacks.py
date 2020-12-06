@@ -3,6 +3,9 @@ import plotly.offline as pyo
 import plotly.graph_objects as go
 import pandas as pd
 from config import PATH_DATASET1
+import warnings
+
+warnings.filterwarnings('ignore')
 
 df = pd.read_csv(PATH_DATASET1)
 
