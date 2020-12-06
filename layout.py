@@ -1,5 +1,7 @@
 import dash_html_components as html
 import dash_core_components as dcc
+import plotly.offline as pyo
+import plotly.graph_objects as go
 from functions import get_category1, get_category2, get_category3
 import pandas as pd
 from config import PATH_DATASET1
@@ -186,7 +188,30 @@ def summary_container5():
 
 def plot_container1():
 
+    x = df['value1']
+    y = df['value2']
+
+    data = [go.Scatter(x=x,
+                       y=y,
+                       mode='markers',
+                       marker=dict(
+                           size=12,
+                           color='rgb(12,34,129)',
+                           symbol='pentagon',
+                           line={'width': 2}
+                       ))]
+
+    layout = go.Layout(title='value1 vs. value2',
+                       xaxis={'title': 'value1'},
+                       yaxis={'title': 'value2'},
+                       hovermode='closest')
+
+    fig = go.Figure(data=data, layout=layout)
+
     element = html.Div(className='plot-container1',
-                       children=['plot goes here'])
+                       children=[
+                           dcc.Graph(id='scatter1',
+                                     figure=fig)
+                       ])
 
     return element

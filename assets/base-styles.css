@@ -6,7 +6,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 60px 120px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 60px 20px 80px 40px 80px 150px;
+    grid-template-rows: 60px 20px 80px 40px 80px 150px 100px;
 }
 
 /* logo elements */
@@ -121,7 +121,7 @@ body {
 
 .plot-container1 {
     grid-column: 3/9;
-    grid-row: 4/7;
+    grid-row: 4/8;
     background: white;
     margin-left: 5px;
     margin-top: 5px;
