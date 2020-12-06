@@ -12,11 +12,20 @@ if __name__ == '__main__':
     x = df['value1']
     y = df['value2']
 
-    data = [go.Scatter(x=x, y=y, mode='markers')]
+    data = [go.Scatter(x=x,
+                       y=y,
+                       mode='markers',
+                       marker=dict(
+                           size=12,
+                           color='rgb(12,34,129)',
+                           symbol='pentagon',
+                           line={'width': 2}
+                       ))]
+
     layout = go.Layout(title='value1 vs. value2',
                        xaxis={'title': 'value1'},
                        yaxis={'title': 'value2'},
-                       hovermode='closest ')
+                       hovermode='closest')
 
     fig = go.Figure(data=data, layout=layout)
     pyo.plot(fig, filename='scatter.html')
