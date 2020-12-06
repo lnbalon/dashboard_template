@@ -33,8 +33,8 @@ def register_callbacks(app):
         ed = pd.to_datetime(ed)
         df['date'] = pd.to_datetime(df['date'])
         df_new = df[(df['category1'] == category1) & (df['category2'] == category2)]
-        df_new = df_new[(df['date'] >= sd) & (df['date'] <= ed)]
-        value1 = df_new['value1'].sum()
+        df_new_ = df_new[(df['date'] >= sd) & (df['date'] <= ed)]
+        value1 = df_new_['value1'].sum()
 
         return "{:,}".format(value1)
 

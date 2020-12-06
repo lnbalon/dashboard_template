@@ -182,3 +182,11 @@ def summary_container5():
                        ])
 
     return element
+
+
+def plot_container1():
+
+    element = html.Div(className='plot-container1',
+                       children=['plot goes here'])
+
+    return element

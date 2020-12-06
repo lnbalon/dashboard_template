@@ -116,3 +116,13 @@ body {
     padding: 5px;
     margin-left: 5px;
 }
+
+/* plot containers */
+
+.plot-container1 {
+    grid-column: 3/9;
+    grid-row: 4/7;
+    background: white;
+    margin-left: 5px;
+    margin-top: 5px;
+}
