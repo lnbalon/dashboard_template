@@ -18,6 +18,7 @@ summary3 = summary_container3()
 summary4 = summary_container4()
 summary5 = summary_container5()
 summary6 = summary_container6()
+summary7 = summary_container7()
 plot1 = plot_container1()
 plot2 = plot_container2()
 plot3 = plot_container3()
@@ -32,6 +33,7 @@ app.layout = html.Div(className='container',
                           summary4,
                           summary5,
                           summary6,
+                          summary7,
                           selector1,
                           selector2,
                           selector3,

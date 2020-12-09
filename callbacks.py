@@ -28,7 +28,9 @@ def register_callbacks(app):
 
     # value1
     @app.callback(
-        Output('value1', 'children'),
+        [Output('value1', 'children'),
+         Output('value2', 'children'),
+         Output('value4', 'children')],
         [Input('demo-dropdown', 'value'),
          Input('demo-checklist', 'value'),
          Input('date-range', 'start_date'),
@@ -40,8 +42,9 @@ def register_callbacks(app):
         df_new = df[(df['category1'] == category1) & (df['category2'] == category2)]
         df_new_ = df_new[(df['date'] >= sd) & (df['date'] <= ed)]
         value1 = df_new_['value1'].sum()
-
-        return "{:,}".format(value1)
+        value2 = df_new_['value2'].sum()
+        value4 = df_new_['value4'].mean()
+        return "{:,}".format(value1), "$ {:,.0f}K".format(value2/1000), "{:.1f}%".format(value4*100)
 
     # date selector
     @app.callback(
@@ -105,7 +108,6 @@ def register_callbacks(app):
 
         # donut chart
         grouped = df_new_.groupby('category3', as_index=False)['value3'].sum()
-        print(grouped)
         data3 = [go.Pie(labels=grouped['category3'], values=grouped['value3'], hole=0.45)]
         layout3 = go.Layout(title='category3 distribution')
         fig3 = go.Figure(data=data3, layout=layout3)

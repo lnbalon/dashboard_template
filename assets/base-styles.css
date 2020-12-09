@@ -5,7 +5,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 60px 120px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 60px 120px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-template-rows: 60px 20px 80px 40px 80px 150px 100px;
 }
 
@@ -28,7 +28,7 @@ body {
 
 .title-container {
     display: inline-grid;
-    grid-column: 2/9;
+    grid-column: 2/18;
     grid-row: 1/2;
     align-items: left;
     justify-items: left;
@@ -126,6 +126,15 @@ body {
     margin-left: 5px;
 }
 
+.summary-container7 {
+    grid-column: 15/17;
+    grid-row: 3/4;
+    background: white;
+    font-family: Arial;
+    padding: 5px;
+    margin-left: 5px;
+}
+
 /* plot containers */
 
 .plot-container1 {
@@ -145,7 +154,7 @@ body {
 }
 
 .plot-container3 {
-    grid-column: 16/17;
+    grid-column: 16/18;
     grid-row: 4/8;
     background: white;
     margin-left: 5px;

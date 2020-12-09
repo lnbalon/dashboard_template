@@ -204,6 +204,23 @@ def summary_container6():
     return element
 
 
+def summary_container7():
+
+    element = html.Div(className='summary-container7',
+                       children=[
+                           html.Div('Value 4:',
+                                    style={'font-size': '14px',
+                                           'font-weight': 'normal'}),
+
+                           html.Div(id='value4',
+                                    style={'font-size': '24px',
+                                           'font-weight': 'bold',
+                                           'margin-top': '15px',
+                                           'margin-left': '10px'}),
+                       ])
+
+    return element
+
 
 def plot_container1():
 
