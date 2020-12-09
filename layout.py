@@ -255,6 +255,9 @@ def plot_container3():
 def get_footer():
 
     element = html.Div(className='footer',
-                       children=['created by lnbalon'])
+                       children=[
+                           html.Span('created and maintained by lnbalon',
+                                     style={'margin-right': '10px'})
+                       ])
 
     return element
