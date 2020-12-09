@@ -84,6 +84,7 @@ def register_callbacks(app):
         layout = go.Layout(title='value1 vs. value2',
                            xaxis={'title': 'value1'},
                            yaxis={'title': 'value2'},
+                           autosize=True,
                            hovermode='closest')
 
         fig = go.Figure(data=data, layout=layout)
