@@ -54,7 +54,8 @@ def register_callbacks(app):
 
     # update the scatter plot
     @app.callback(
-        Output('scatter1', 'figure'),
+        [Output('scatter1', 'figure'),
+         Output('time-series1', 'figure')],
         [Input('demo-dropdown', 'value'),
          Input('demo-checklist', 'value'),
          Input('date-range', 'start_date'),
@@ -89,16 +90,17 @@ def register_callbacks(app):
         fig = go.Figure(data=data, layout=layout)
 
         # time series
-        data = [go.Scatter(x=x,
-                           y=y,
-                           mode='markers',
-                           marker=dict(
-                               size=12,
-                               color='rgb(12,34,129)',
-                               symbol='pentagon',
-                               line={'width': 2}),
-                           hovertemplate='<i>value1</i>: $%{x:.2f} <br>' + '<i>value2</i>: %{y:.2f}'
-                           )]
+        data2 = [go.Scatter(x=df_new_['date'],
+                            y=df_new_['value3'],
+                            mode='lines',
+                            )]
 
-        return fig
+        layout2 = go.Layout(title='date vs. value3',
+                            xaxis={'title': 'date'},
+                            yaxis={'title': 'value3'},
+                            autosize=True,
+                            hovermode='closest')
+        fig2 = go.Figure(data=data2, layout=layout2)
+
+        return fig, fig2
 
