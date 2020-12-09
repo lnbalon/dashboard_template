@@ -55,7 +55,8 @@ def register_callbacks(app):
     # update the scatter plot
     @app.callback(
         [Output('scatter1', 'figure'),
-         Output('time-series1', 'figure')],
+         Output('time-series1', 'figure'),
+         Output('pie-chart1', 'figure')],
         [Input('demo-dropdown', 'value'),
          Input('demo-checklist', 'value'),
          Input('date-range', 'start_date'),
@@ -102,5 +103,12 @@ def register_callbacks(app):
                             hovermode='closest')
         fig2 = go.Figure(data=data2, layout=layout2)
 
-        return fig, fig2
+        # donut chart
+        grouped = df_new_.groupby('category3', as_index=False)['value3'].sum()
+        print(grouped)
+        data3 = [go.Pie(labels=grouped['category3'], values=grouped['value3'], hole=0.45)]
+        layout3 = go.Layout(title='category3 distribution')
+        fig3 = go.Figure(data=data3, layout=layout3)
+
+        return fig, fig2, fig3
 
