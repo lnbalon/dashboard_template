@@ -3,7 +3,7 @@ import flask
 import dash_html_components as html
 from layout import logo_container, app_name_container, summary_container1, summary_container2, \
     category1_selector_container, category2_selector_container, summary_container3, date_selector_container, \
-    summary_container4, summary_container5, plot_container1
+    summary_container4, summary_container5, plot_container1, plot_container2
 from callbacks import register_callbacks
 
 server = flask.Flask(__name__)
@@ -20,6 +20,7 @@ summary3 = summary_container3()
 summary4 = summary_container4()
 summary5 = summary_container5()
 plot1 = plot_container1()
+plot2 = plot_container2()
 
 app.layout = html.Div(className='container',
                       children=[
@@ -33,7 +34,8 @@ app.layout = html.Div(className='container',
                           selector1,
                           selector2,
                           selector3,
-                          plot1
+                          plot1,
+                          plot2
                       ])
 
 register_callbacks(app)

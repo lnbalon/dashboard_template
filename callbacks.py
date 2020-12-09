@@ -78,7 +78,6 @@ def register_callbacks(app):
                                symbol='pentagon',
                                line={'width': 2}),
                            hovertemplate='<i>value1</i>: $%{x:.2f} <br>' + '<i>value2</i>: %{y:.2f}'
-
                            )]
 
         layout = go.Layout(title='value1 vs. value2',
@@ -88,6 +87,18 @@ def register_callbacks(app):
                            hovermode='closest')
 
         fig = go.Figure(data=data, layout=layout)
+
+        # time series
+        data = [go.Scatter(x=x,
+                           y=y,
+                           mode='markers',
+                           marker=dict(
+                               size=12,
+                               color='rgb(12,34,129)',
+                               symbol='pentagon',
+                               line={'width': 2}),
+                           hovertemplate='<i>value1</i>: $%{x:.2f} <br>' + '<i>value2</i>: %{y:.2f}'
+                           )]
 
         return fig
 

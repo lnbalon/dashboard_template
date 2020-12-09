@@ -194,3 +194,13 @@ def plot_container1():
                        ])
 
     return element
+
+
+def plot_container2():
+
+    element = html.Div(className='plot-container2',
+                       children=[
+                           dcc.Graph(id='time-series1')
+                       ])
+
+    return element
