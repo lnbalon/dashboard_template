@@ -250,3 +250,11 @@ def plot_container3():
                        ])
 
     return element
+
+
+def get_footer():
+
+    element = html.Div(className='footer',
+                       children=['created by lnbalon'])
+
+    return element

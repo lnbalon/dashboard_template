@@ -37,7 +37,7 @@ body {
     font-weight: bold;
     background: white;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 /* selector elements */
@@ -160,4 +160,18 @@ body {
     margin-left: 5px;
     margin-top: 5px;
     margin-right: 5px;
+}
+
+/* footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  text-align: right;
+  font-family: Arial;
+  font-size: 12px;
+  padding-right: 15px;
 }

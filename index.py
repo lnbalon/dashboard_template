@@ -22,6 +22,7 @@ summary7 = summary_container7()
 plot1 = plot_container1()
 plot2 = plot_container2()
 plot3 = plot_container3()
+footer = get_footer()
 
 app.layout = html.Div(className='container',
                       children=[
@@ -39,7 +40,8 @@ app.layout = html.Div(className='container',
                           selector3,
                           plot1,
                           plot2,
-                          plot3
+                          plot3,
+                          footer
                       ])
 
 register_callbacks(app)
