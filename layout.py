@@ -204,3 +204,13 @@ def plot_container2():
                        ])
 
     return element
+
+
+def plot_container3():
+
+    element = html.Div(className='plot-container3',
+                       children=[
+                           dcc.Graph(id='pie-chart1')
+                       ])
+
+    return element
