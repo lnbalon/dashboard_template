@@ -43,7 +43,7 @@ body {
 
 .link1-container {
     display: inline-grid;
-    grid-column: 6/18;
+    grid-column: 6/8;
     grid-row: 1/2;
     align-items: left;
     justify-items: left;
@@ -54,6 +54,21 @@ body {
     padding-left: 10px;
     padding-top: 15px;
 }
+
+.link2-container {
+    display: inline-grid;
+    grid-column: 8/18;
+    grid-row: 1/2;
+    align-items: left;
+    justify-items: left;
+    font-family: Arial;
+    font-size: 120%;
+    font-weight: normal;
+    background: white;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
 
 
 /* selector elements */

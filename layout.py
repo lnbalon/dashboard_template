@@ -37,6 +37,14 @@ def app_name_container():
 def link1_container():
 
     element = html.Div(className='link1-container',
+                       children=[dcc.Link('Go to Page 2', href='/page-2')])
+
+    return element
+
+
+def link2_container():
+
+    element = html.Div(className='link2-container',
                        children=[dcc.Link('Go to Page 1', href='/page-1')])
 
     return element
@@ -271,3 +279,16 @@ def get_footer():
     return element
 
 
+page1_layout = html.Div(className='container',
+                        children=[
+                          logo_container(),
+                          app_name_container(),
+                          link1_container(),
+                          link2_container()])
+
+page2_layout = html.Div(className='container',
+                        children=[
+                          logo_container(),
+                          app_name_container(),
+                          link1_container(),
+                          link2_container()])
