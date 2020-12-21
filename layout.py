@@ -269,3 +269,5 @@ def get_footer():
                        ])
 
     return element
+
+

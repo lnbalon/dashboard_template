@@ -9,6 +9,7 @@ body {
     grid-template-rows: 60px 20px 80px 40px 80px 150px 100px;
 }
 
+
 /* logo elements */
 .logo-container {
     display: inline-grid;
