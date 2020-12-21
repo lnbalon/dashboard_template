@@ -37,7 +37,10 @@ def app_name_container():
 def link1_container():
 
     element = html.Div(className='link1-container',
-                       children=[dcc.Link('Go to Page 2', href='/page-2')])
+                       children=[
+                           dcc.Link(className='link',
+                                    children=['Go to Page 2'],
+                                    href='/page-2')])
 
     return element
 
@@ -45,7 +48,9 @@ def link1_container():
 def link2_container():
 
     element = html.Div(className='link2-container',
-                       children=[dcc.Link('Go to Page 1', href='/')])
+                       children=[dcc.Link(className='link',
+                                          children=['Main Page'],
+                                          href='/')])
 
     return element
 
