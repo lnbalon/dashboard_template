@@ -5,7 +5,6 @@ import pandas as pd
 from config import PATH_DATASET1
 import warnings
 import dash
-from page1_layout import page1_layout
 
 warnings.filterwarnings('ignore')
 
@@ -116,9 +115,3 @@ def register_callbacks(app):
 
         return fig, fig2, fig3
 
-    # Update the index
-    @app.callback(dash.dependencies.Output('page-content', 'children'),
-                  [dash.dependencies.Input('url', 'pathname')])
-    def display_page(pathname):
-        if pathname == '/page-1':
-            return page1_layout

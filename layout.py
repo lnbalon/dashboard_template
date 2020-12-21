@@ -45,7 +45,7 @@ def link1_container():
 def link2_container():
 
     element = html.Div(className='link2-container',
-                       children=[dcc.Link('Go to Page 1', href='/page-1')])
+                       children=[dcc.Link('Go to Page 1', href='/')])
 
     return element
 
@@ -281,17 +281,29 @@ def get_footer():
 
 page1_layout = html.Div(className='container',
                         children=[
-                          logo_container(),
-                          app_name_container(),
-                          link1_container(),
-                          link2_container(),
-                          category1_selector_container(),
-                          category2_selector_container()])
+                            logo_container(),
+                            app_name_container(),
+                            link1_container(),
+                            link2_container(),
+                            category1_selector_container(),
+                            category2_selector_container(),
+                            date_selector_container(),
+                            summary_container2(),
+                            summary_container1(),
+                            summary_container4(),
+                            summary_container5(),
+                            summary_container3(),
+                            summary_container6(),
+                            summary_container7(),
+                            plot_container1(),
+                            plot_container2(),
+                            plot_container3(),
+                            get_footer()])
 
 page2_layout = html.Div(className='container',
                         children=[
-                          logo_container(),
-                          app_name_container(),
-                          link1_container(),
-                          link2_container(),
-                          get_footer()])
+                            logo_container(),
+                            app_name_container(),
+                            link1_container(),
+                            link2_container(),
+                            get_footer()])
