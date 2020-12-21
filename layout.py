@@ -284,11 +284,14 @@ page1_layout = html.Div(className='container',
                           logo_container(),
                           app_name_container(),
                           link1_container(),
-                          link2_container()])
+                          link2_container(),
+                          category1_selector_container(),
+                          category2_selector_container()])
 
 page2_layout = html.Div(className='container',
                         children=[
                           logo_container(),
                           app_name_container(),
                           link1_container(),
-                          link2_container()])
+                          link2_container(),
+                          get_footer()])
