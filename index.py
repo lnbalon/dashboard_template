@@ -9,6 +9,7 @@ app = dash.Dash(__name__, server=server)
 
 logo = logo_container()
 app_name = app_name_container()
+link1 = link1_container()
 selector1 = category1_selector_container()
 selector2 = category2_selector_container()
 selector3 = date_selector_container()
@@ -28,6 +29,7 @@ app.layout = html.Div(className='container',
                       children=[
                           logo,
                           app_name,
+                          link1,
                           summary1,
                           summary2,
                           summary3,

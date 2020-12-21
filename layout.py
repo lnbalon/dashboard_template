@@ -34,6 +34,14 @@ def app_name_container():
     return app_name
 
 
+def link1_container():
+
+    element = html.Div(className='link1-container',
+                       children=[dcc.Link('Go to Page 1', href='/page-1')])
+
+    return element
+
+
 def category1_selector_container():
 
     element = html.Div(className='category1-selector',

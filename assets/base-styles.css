@@ -28,7 +28,7 @@ body {
 
 .title-container {
     display: inline-grid;
-    grid-column: 2/18;
+    grid-column: 2/5;
     grid-row: 1/2;
     align-items: left;
     justify-items: left;
@@ -39,6 +39,21 @@ body {
     padding-left: 10px;
     padding-top: 15px;
 }
+
+.link1-container {
+    display: inline-grid;
+    grid-column: 5/18;
+    grid-row: 1/2;
+    align-items: left;
+    justify-items: left;
+    font-family: Arial;
+    font-size: 150%;
+    font-weight: bold;
+    background: white;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
 
 /* selector elements */
 
