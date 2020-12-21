@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from config import PATH_DATASET1
 import warnings
+from layout import *
 import dash
 
 warnings.filterwarnings('ignore')
@@ -114,4 +115,14 @@ def register_callbacks(app):
         fig3 = go.Figure(data=data3, layout=layout3)
 
         return fig, fig2, fig3
+
+    @app.callback(Output('page-content', 'children'),
+                  Input('url', 'pathname'))
+    def display_page(pathname):
+        if pathname == '/':
+            return page1_layout
+        elif pathname == '/page-2':
+            return page2_layout
+        else:
+            return '404'
 
