@@ -15,4 +15,5 @@ This repository contains a template for the creation of dashboard using Plotly a
 - [x] Donut chart
 - [x] Organize the directories in the project folder
 - [x] Beautify the dashboard
+- [x] Deploy
 
